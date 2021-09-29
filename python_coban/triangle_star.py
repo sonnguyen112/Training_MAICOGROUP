@@ -1,4 +1,4 @@
-def star(n):
+def drawTriangleStar(n):
     for i in range(n, 0, -1):
         for j in range(n - i):
             print(" ", end="")
@@ -6,4 +6,5 @@ def star(n):
             print("*", end="")
         print()
 
-star(10)
+n = int(input("Nhap n: "))
+drawTriangleStar(n)

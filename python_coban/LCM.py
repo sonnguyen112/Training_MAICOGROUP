@@ -1,4 +1,4 @@
-def GCD(a, b):
+def findGreatestCommonDivisor (a, b):
     if a == 0 or b == 0:
         return a + b
     while a != b:
@@ -8,7 +8,9 @@ def GCD(a, b):
             b -= a
     return a
 
-def LCM(a, b):
-    return (a * b) / GCD(a, b)
+def findLeastCommonMultiple(a, b):
+    return (a * b) / findGreatestCommonDivisor(a, b)
 
-print(LCM(8, 6))
+a = int(input("Nhap so thu nhat: "))
+b = int(input("Nhap so thu hai: "))
+print(findLeastCommonMultiple(a, b))

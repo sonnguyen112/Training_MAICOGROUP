@@ -13,7 +13,7 @@ symbol = {
 }
 
 def nextDay(dayName):
-    day = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"]
+    day = ("monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday")
     index = day.index(dayName)
     if index == len(day) - 1:
         index = -1
@@ -21,9 +21,11 @@ def nextDay(dayName):
 
 file = open("dubaothoitiet.txt", "r")
 lines = file.readlines()
+check = False
 for i in range(len(lines)):
     date = lines[i].split(":")[0]
     if today == date:
+        check = True
         print("weather forecast for 4 days: ")
         for j in range(1, numNextDay + 1):
             dayName = nextDay(todayName)
@@ -39,7 +41,6 @@ for i in range(len(lines)):
                 nextDate = datetime.datetime(year, month, day) + datetime.timedelta(days=1)
                 date = f"{nextDate.strftime('%d')}/{nextDate.strftime('%m')}/{nextDate.strftime('%Y')}"
                 print(f"{dayName} - {date}: chua co thong tin")
-    else:
-        print("chua co thong tin")
-        break
+if check == False:
+    print("chua co thong tin")
 file.close()
