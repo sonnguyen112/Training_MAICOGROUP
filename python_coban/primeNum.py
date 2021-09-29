@@ -7,4 +7,5 @@ def isPrime(n):
             return False
     return True
 
-print(isPrime(9))
+n = int(input("Nhap n: "))
+print(isPrime(n))
