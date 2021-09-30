@@ -1,5 +1,7 @@
 import math
-def isPrime(n):
+
+
+def is_prime(n):
     if n < 2:
         return False
     for i in range(2, int(math.sqrt(n) + 1)):
@@ -7,5 +9,9 @@ def isPrime(n):
             return False
     return True
 
+
 n = int(input("Nhap n: "))
-print(isPrime(n))
+if is_prime(n):
+    print(n, "is prime number")
+else:
+    print(n, "isn't prime number")
