@@ -1,4 +1,4 @@
-def findGreatestCommonDivisor (a, b):
+def find_greatest_common_divisor (a, b):
     if a < 0 or b < 0:
         return
     if a == 0 or b == 0:
@@ -11,11 +11,11 @@ def findGreatestCommonDivisor (a, b):
     return a
 
 
-def findLeastCommonMultiple(a, b):
-    return (a * b) / findGreatestCommonDivisor(a, b)
+def find_least_common_multiple(a, b):
+    return (a * b) / find_greatest_common_divisor(a, b)
 
 
 a = int(input("Nhap so thu nhat: "))
 b = int(input("Nhap so thu hai: "))
-print("Greatest Common Divisor of a and b is",findLeastCommonMultiple(a, b))
+print("Least common multiple of a and b is",find_least_common_multiple(a, b))
 
