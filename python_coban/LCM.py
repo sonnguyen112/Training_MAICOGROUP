@@ -11,6 +11,4 @@ def findGreatestCommonDivisor (a, b):
 def findLeastCommonMultiple(a, b):
     return (a * b) / findGreatestCommonDivisor(a, b)
 
-a = int(input("Nhap so thu nhat: "))
-b = int(input("Nhap so thu hai: "))
 print(findLeastCommonMultiple(a, b))
