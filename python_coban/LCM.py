@@ -1,6 +1,4 @@
 def find_greatest_common_divisor (a, b):
-    if a < 0 or b < 0:
-        return
     if a == 0 or b == 0:
         return a + b
     while a != b:
@@ -12,6 +10,8 @@ def find_greatest_common_divisor (a, b):
 
 
 def find_least_common_multiple(a, b):
+    if a < 0 or b < 0:
+        return
     return (a * b) / find_greatest_common_divisor(a, b)
 
 
