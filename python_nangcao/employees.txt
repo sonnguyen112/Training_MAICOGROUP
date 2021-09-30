@@ -1,0 +1,12 @@
+{"full_name": "Nguyen Van A", "date_of_birth": "01/01/2002", "position": "fresher", "skills": ["java", "c++", "python"], "start_year": 2010}
+{"full_name": "Nguyen Van B", "date_of_birth": "01/02/2002", "position": "fresher", "skills": ["java", "c++", "python", "english"], "start_year": 2012}
+{"full_name": "Nguyen Van C", "date_of_birth": "02/02/2001", "position": "junior", "skills": ["java", "c++", "python", "english"], "start_year": 2008}
+{"full_name": "Nguyen Van D", "date_of_birth": "02/02/1999", "position": "junior", "skills": ["java", "c++"], "start_year": 2008}
+{"full_name": "Nguyen Van E", "date_of_birth": "02/02/1998", "position": "junior", "skills": ["java", "c++", "JS"], "start_year": 2008}
+{"full_name": "Nguyen Van F", "date_of_birth": "02/02/2000", "position": "junior", "skills": ["java", "c++", "JS", "Go"], "start_year": 2008}
+{"full_name": "Nguyen Van G", "date_of_birth": "02/02/2001", "position": "junior", "skills": ["java", "c++", "JS", "Go"], "start_year": 2008}
+{"full_name": "Nguyen Van H", "date_of_birth": "01/12/2001", "position": "senior", "skills": ["english", "communicate"], "start_year": 2010}
+{"full_name": "Nguyen Van An", "date_of_birth": "02/12/2001", "position": "senior", "skills": ["english", "communicate", "dev"], "start_year": 2009}
+{"full_name": "Nguyen Van Cuong", "date_of_birth": "02/12/2001", "position": "senior", "skills": ["english", "communicate", "dev"], "start_year": 2009}
+{"full_name": "Nguyen Van Khoa", "date_of_birth": "02/12/1975", "position": "senior", "skills": ["english", "communicate", "dev"], "start_year": 2009}
+{"full_name": "Nguyen Van Khoa", "date_of_birth": "02/12/1975", "position": "senior", "skills": ["english", "communicate", "dev"], "start_year": 2009}
