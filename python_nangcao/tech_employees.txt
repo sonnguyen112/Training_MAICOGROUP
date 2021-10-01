@@ -3,3 +3,4 @@
 {"full_name": "Nguyen Van Cuong", "date_of_birth": "02/12/2001", "position": "senior", "skills": ["english", "communicate", "dev"], "start_year": 2009, "language_programming": ["java", "c++"], "projects": ["project1", "project2", "project3"]}
 {"full_name": "Nguyen Van Khoa", "date_of_birth": "02/12/1975", "position": "senior", "skills": ["english", "communicate", "dev"], "start_year": 2009, "language_programming": ["java", "c++"], "projects": ["project1", "project2", "project3"]}
 {"full_name": "Nguyen Van Khoa", "date_of_birth": "02/12/1975", "position": "senior", "skills": ["english", "communicate", "dev"], "start_year": 2009, "language_programming": ["java", "c++"], "projects": ["project1", "project2", "project3", "project4", "project5", "project6"]}
+{"full_name": "Nguyen Van Cuong", "date_of_birth": "10/10/1997", "position": "dev", "skills": ["dev", "english"], "start_year": 2007, "language_programming": ["python", "c++"], "projects": ["project 1", "project 2"]}
