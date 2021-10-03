@@ -17,7 +17,7 @@ class TechEmployee(Employee):
         self.projects = projects
 
 
-class EmployeeList():
+class ListEmployees():
     employee_list = []
 
     def add_employee(self, employee):
@@ -44,7 +44,7 @@ class EmployeeList():
                 return
 
 
-class TechEmployeeList():
+class ListTechEmployees():
     tech_employee_list = []
 
     def add_tech_employee(self, tech_employee):
@@ -88,7 +88,7 @@ employee1 = Employee("Nguyen Van A", "1/12/2002", "dev", ["dev"], 2010)
 employee2 = Employee("Nguyen Van B", "8/1/2001", "dev", ["dev", "english"], 2011)
 employee3 = Employee("Nguyen Van An", "8/1/2001", "dev", ["dev", "english", "communicate"], 2011)
 employee4 = Employee("Nguyen Van Anh", "1/12/2002", "dev", ["dev"], 2009)
-employee_list = EmployeeList()
+employee_list = ListEmployees()
 employee_list.add_employee(employee1)
 employee_list.add_employee(employee2)
 employee_list.add_employee(employee3)
@@ -98,7 +98,7 @@ tech_employee1 = TechEmployee("Nguyen Van C", "7/7/2020", "dev", ["dev", "englis
 tech_employee2 = TechEmployee("Nguyen Van D", "7/7/2020", "dev", ["dev", "english", "communicate"], 2008, ["python", "c++"], ["project1", "project2"])
 tech_employee3 = TechEmployee("Nguyen Van E", "7/7/1975", "dev", ["dev", "english", "communicate"], 1999, ["python", "c++"], ["project1", "project2",
 "project3", "project4", "project5", "project6"])
-tech_employee_list = TechEmployeeList()
+tech_employee_list = ListTechEmployees()
 tech_employee_list.add_tech_employee(tech_employee1)
 tech_employee_list.add_tech_employee(tech_employee2)
 tech_employee_list.add_tech_employee(tech_employee3)
