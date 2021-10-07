@@ -11,6 +11,7 @@ def csv_process():
             active[index] = df["Active Minutes"].iloc[index]
 
     print(active)
+    return active
 
 
 csv_process()

@@ -6,9 +6,11 @@ def product_rand_matrix():
     print("a)")
     A = np.random.randint(20, size=(3, 4))
     B = np.random.randint(20, size=(4, 4))
+    product = A @ B
     print(A, "\n x ")
     print(B, "\n = ")
-    print(A @ B, "\n")
+    print(product, "\n")
+    return product
 
 
 def odd_even_matrix():
@@ -18,6 +20,7 @@ def odd_even_matrix():
     A[A % 2 == 0] = 1
     A[A != 1] = 0
     print("After: \n", A, "\n")
+    return A
 
 
 def flip_and_count_prime_diagonal():
@@ -29,6 +32,7 @@ def flip_and_count_prime_diagonal():
     A_diagonal = A.diagonal()
     vfunc = np.vectorize(sp.isprime)
     print(f"The number of prime is: {np.count_nonzero(vfunc(A_diagonal))}")
+    return (A, np.count_nonzero(vfunc(A_diagonal)))
 
 
 product_rand_matrix()
