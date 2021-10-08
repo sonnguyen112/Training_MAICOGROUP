@@ -2,7 +2,7 @@ import pandas as pd
 
 
 def load_csv(file_path):
-    return pd.read_csv("dataset.csv")
+    return pd.read_csv(file_path)
 
 
 def save_to_active_dict(dataframe):
