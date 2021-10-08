@@ -1,17 +1,25 @@
 import pandas as pd
 
 
-def csv_process():
-    df = pd.read_csv("dataset.csv")
-    print(df.head(50))
-    print(df[["Date", "Calories (kcal)", "Distance (m)"]])
-    active = {}
-    for index in df["Active Minutes"].index:
-        if df["Active Minutes"].iloc[index] > 100:
-            active[index] = df["Active Minutes"].iloc[index]
+def load_csv(file_path):
+    return pd.read_csv("dataset.csv")
 
-    print(active)
+
+def save_to_active_dict(dataframe):
+    active = {}
+    for index in dataframe["Active Minutes"].index:
+        if dataframe["Active Minutes"].iloc[index] > 100:
+            active[index] = dataframe["Active Minutes"].iloc[index]
     return active
 
 
-csv_process()
+def main():
+    df = load_csv("dataset.csv")
+    print(df.head(50))
+    print(df[["Date", "Calories (kcal)", "Distance (m)"]])
+    active = save_to_active_dict(df)
+    print(active)
+
+
+if __name__ == "__main__":
+    main()
