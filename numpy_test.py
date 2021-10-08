@@ -2,7 +2,19 @@ import numpy as np
 import sympy as sp
 
 
-def product_rand_matrix():
+def odd_even_matrix(matrix):
+    matrix[matrix % 2 == 0] = 1
+    matrix[matrix != 1] = 0
+    return matrix
+
+
+def count_prime_diagonal(matrix):
+    diagonal = matrix.diagonal()
+    vfunc = np.vectorize(sp.isprime)
+    return np.count_nonzero(vfunc(diagonal))
+
+
+def main():
     print("a)")
     A = np.random.randint(20, size=(3, 4))
     B = np.random.randint(20, size=(4, 4))
@@ -10,31 +22,20 @@ def product_rand_matrix():
     print(A, "\n x ")
     print(B, "\n = ")
     print(product, "\n")
-    return product
 
-
-def odd_even_matrix():
     print("b)")
     A = np.random.randint(20, size=(4, 4))
     print("Before: \n", A)
-    A[A % 2 == 0] = 1
-    A[A != 1] = 0
+    A = odd_even_matrix(A)
     print("After: \n", A, "\n")
-    return A
 
-
-def flip_and_count_prime_diagonal():
     print("c)")
     A = np.random.randint(20, size=(5, 5))
     print("A before flip: \n", A)
     A = np.fliplr(A)
     print("A after flip: \n", A)
-    A_diagonal = A.diagonal()
-    vfunc = np.vectorize(sp.isprime)
-    print(f"The number of prime is: {np.count_nonzero(vfunc(A_diagonal))}")
-    return (A, np.count_nonzero(vfunc(A_diagonal)))
+    print(f"The number of prime is: {count_prime_diagonal(A)}")
 
 
-product_rand_matrix()
-odd_even_matrix()
-flip_and_count_prime_diagonal()
+if __name__ == "__main__":
+    main()
