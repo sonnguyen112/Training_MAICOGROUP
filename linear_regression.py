@@ -42,7 +42,7 @@ def visualize(input_data, real_outcome, outcome):
 
 
 def main():
-    df = load_csv("linear_regression.csv")
+    df = load_csv("datasets/linear_regression.csv")
     test_set, train_set = split_train_test(df)
     input_data = train_set["x"].values
     real_outcome = train_set["y"].values
