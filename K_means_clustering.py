@@ -3,9 +3,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 from scipy.spatial.distance import cdist
 
-# Number of cluster
-K = 4
-
 
 def load_csv(file_path):
     return pd.read_csv(file_path)
@@ -66,10 +63,9 @@ def k_means(points, num_of_clusters):
 
 
 def main():
-    global K
     df = load_csv("datasets/position.csv")
     points = np.array(df)
-    centers, labels, _ = k_means(points, K)
+    centers, labels, _ = k_means(points, 4)
     visualize(points, labels, centers)
 
 
