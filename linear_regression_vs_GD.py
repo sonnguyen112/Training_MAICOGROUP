@@ -18,7 +18,7 @@ def is_stop(w, X_bar, y):
     return np.linalg.norm(gradient(w, X_bar, y))/len(w) < 1e-3
 
 
-def GD_momentum_NAG(w_init, X_bar, y, eta, gamma):
+def GD_momentum(w_init, X_bar, y, eta, gamma):
     w = np.array(w_init)
     v_old = np.zeros_like(w_init)
     for i in range(100000):
@@ -35,7 +35,7 @@ def linear_regression_vs_GD(input_data, real_outcome, w_init, eta, gamma=0.9):
     one_matrix = np.ones((input_data.shape[0], 1))
     X_bar = np.concatenate((one_matrix, input_data), axis=1)
     y = real_outcome
-    return GD_momentum_NAG(w_init, X_bar, y, eta, gamma)
+    return GD_momentum(w_init, X_bar, y, eta, gamma)
 
 
 def visualize(X_test, y_test, y_pred):
