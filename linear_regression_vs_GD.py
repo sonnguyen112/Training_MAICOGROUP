@@ -61,8 +61,12 @@ def main():
     w_0, w_1, i = linear_regression_vs_GD(
         input_data, real_outcome, [[2], [1]], 0.0001)
     y_pred = w_0 + X_test * w_1
-    print("Sales Test: \n", y_test)
-    print("Sales Predict: \n", y_pred)
+    result = pd.DataFrame({
+        "Marketing": X_test,
+        "Sales Test": y_test,
+        "Sales Predict": y_pred
+    })
+    print(result)
     visualize(X_test, y_test, y_pred)
 
 
