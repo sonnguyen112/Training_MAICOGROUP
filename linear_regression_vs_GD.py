@@ -22,7 +22,7 @@ def GD_momentum(w_init, X_bar, y, eta, gamma):
     w = np.array(w_init)
     v_old = np.zeros_like(w_init)
     for i in range(100000):
-        v_new = gamma * v_old + eta * gradient(w, X_bar, y)
+        v_new = gamma * v_old + eta * gradient(w , X_bar, y)
         w_new = w - v_new
         if is_stop(w_new, X_bar, y):
             break
@@ -60,6 +60,7 @@ def main():
     real_outcome = y_train.reshape(1, len(y_train)).T
     w_0, w_1, i = linear_regression_vs_GD(
         input_data, real_outcome, [[2], [1]], 0.0001)
+    print(f"w_0 = {w_0}, w_1 = {w_1} after {i} loop")
     y_pred = w_0 + X_test * w_1
     result = pd.DataFrame({
         "Marketing": X_test,
